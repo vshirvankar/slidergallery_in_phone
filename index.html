@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="image slider/style.css">
+
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body>
+
+    <!-- <div class="container pt-5">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="left-side">
+                    <h3>Hello world</h3>
+                    <div class="header-divider">
+
+                    </div>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus reprehenderit necessitatibus
+                        recusandae tempore in optio impedit. Incidunt error, voluptatum maxime quae distinctio harum
+                        asperiores, minima dicta, in excepturi laboriosam repudiandae.</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container">
+        <div class="row d-md-flex justify-content-center">
+            <div class="row">
+                <div class="col-md-12 d-flex justify-content-center mt-5">
+                    <div class="iphone">
+                        <div class="box">
+                            
+                        </div>
+                        <div  id="MyClockDisplay" class="clock" onload="showTime()"> </div>
+                        <div class="para1"><a href="https://bootstrapmade.com/"><i class="fa-solid fa-wifi"></a></i></div>
+                        <div class="para2"><i class="fa-solid fa-signal"></i></div>
+                        <div class="icon">
+                            <i class="fa-solid fa-signal-bars"></i>
+                        </div>
+
+                        <div class='slider-btns'>
+                            <button class="btn-left"><</i></button>
+                            <button class="btn-right">></button>
+                          </div>
+                        
+                            <div class="pic-container">
+                              <div class="pic pic-1">
+                                <img class="pic__img"     src='images/2.jpg' alt=''>
+                              </div>
+                              <div class="pic pic-2">
+                                <img class="pic__img" src='images/1.jpg' alt=''>
+                              </div>
+                              <div class="pic pic-3">
+                                <img class="pic__img" src='images/3.jpg' alt=''>
+                              </div>
+                              <div class="pic pic-4">
+                                <img class="pic__img"     src='images/1.jpg' alt=''>
+                              </div>
+                              <div class="pic pic-5">
+                                <img class="pic__img" src='images/2.jpg' alt=''>
+
+                              </div>
+                            </div>
+                          </div>
+                          
+                          
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="js/bootstrap.min.js"></script>
+<!-- partial -->
+<script  src="image slider/script.js"></script>
+<script>
+  function showTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    // s = (s < 10) ? "0" + s : s;
+    
+    var time = h + ":" + m +  " " + session;
+    document.getElementById("MyClockDisplay").innerText = time;
+    document.getElementById("MyClockDisplay").textContent = time;
+    
+    setTimeout(showTime, 1000);
+    
+}
+
+showTime();
+</script>
+</html>

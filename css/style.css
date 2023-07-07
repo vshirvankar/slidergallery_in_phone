@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.header-divider {
+  position: relative;
+  width: 90px;
+  height: 4px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+}
+
+.header-divider:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  height: 6px;
+  width: 15px;
+  border-radius: 0;
+  background-color: #fea536;
+  -webkit-animation: heading-move 5s infinite linear;
+  animation: heading-move 5s infinite linear;
+}
+
+/* @-webkit-keyframes heading-move {
+    0% {
+    transform:translateX(-1px)
+    }
+    50% {
+    transform:translateX(75px)
+    }
+    100% {
+    transform:translateX(-1px)
+    }
+    } */
+@keyframes heading-move {
+  0% {
+    transform: translateX(-1px);
+  }
+  50% {
+    transform: translateX(75px);
+  }
+  100% {
+    transform: translateX(-1px);
+  }
+}
+
+.iphone {
+  width: 290px;
+  height: 500px;
+  border: 10px solid #000;
+  border-radius: 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 16px -3px rgba(0,0,0,1);
+-moz-box-shadow: 0px 0px 16px -3px rgba(0,0,0,1);
+box-shadow: 0px 0px 16px -3px rgba(0,0,0,1);
+}
+
+.box {
+  width: 100px;
+  height: 23px;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  border-radius: 0 0 10px 10px;
+  z-index: 111;
+}
+
+
+.clock {
+  position: absolute;
+  top: 0.5%;
+  left: 7%;
+  font-size: 12px;
+  font-weight: 700;
+  z-index: +1;
+  color: #000;
+}
+
+.para1 {
+    position: absolute;
+    top: 0.5%;
+    right: 20%;
+    font-size: 12px;
+    font-weight: 700;
+    z-index: +9999;
+    color: #000;
+  }
+
+  .para2 {
+    position: absolute;
+    top: 0.5%;
+    right: 10%;
+    font-size: 12px;
+    font-weight: 700;
+    z-index: +9999;
+    color: #000;
+  }
+
+.slider-btns {
+    position: absolute;
+    bottom: 44%;
+    display: flex;
+    gap: 12rem;
+}
+
+.btn-left ,
+.btn-right  {
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  border-radius: 10px;
+  height: 20px;
+  width: 20px;
+  opacity: 0;
+  line-height: 15px;
+  border: none;
+  font-size: 10px;
+  font-weight: 700;
+  z-index: 10;
+  transition: 0.5s;
+}
+
+.iphone:hover .btn-left,
+.iphone:hover .btn-right{
+  transform: scale(1.4);
+  opacity: 100%;
+}
+
+
