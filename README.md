@@ -1,0 +1,1 @@
+# slidergallery_in_phone
